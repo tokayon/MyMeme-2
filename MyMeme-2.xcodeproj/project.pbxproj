@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E71B12DB1CB1A6AB00955C83 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E71B12DA1CB1A6AB00955C83 /* Impact.ttf */; };
 		E77EC5BA1CAC317A0019D3B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77EC5B91CAC317A0019D3B9 /* AppDelegate.swift */; };
 		E77EC5BC1CAC317A0019D3B9 /* MemeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77EC5BB1CAC317A0019D3B9 /* MemeEditorViewController.swift */; };
 		E77EC5BF1CAC317A0019D3B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E77EC5BD1CAC317A0019D3B9 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E71B12DA1CB1A6AB00955C83 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 		E77EC5B61CAC317A0019D3B9 /* MyMeme-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyMeme-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77EC5B91CAC317A0019D3B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E77EC5BB1CAC317A0019D3B9 /* MemeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeEditorViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				E77EC5BD1CAC317A0019D3B9 /* Main.storyboard */,
 				E77EC5C01CAC317A0019D3B9 /* Assets.xcassets */,
 				E77EC5C21CAC317A0019D3B9 /* LaunchScreen.storyboard */,
+				E71B12DA1CB1A6AB00955C83 /* Impact.ttf */,
 				E77EC5C51CAC317A0019D3B9 /* Info.plist */,
 			);
 			path = "MyMeme-2";
@@ -127,7 +130,7 @@
 				TargetAttributes = {
 					E77EC5B51CAC317A0019D3B9 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = VS46UCRAEW;
+						DevelopmentTeam = 5PWYZ4J78Z;
 					};
 				};
 			};
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E71B12DB1CB1A6AB00955C83 /* Impact.ttf in Resources */,
 				E77EC5C41CAC317A0019D3B9 /* LaunchScreen.storyboard in Resources */,
 				E77EC5C11CAC317A0019D3B9 /* Assets.xcassets in Resources */,
 				E77EC5BF1CAC317A0019D3B9 /* Main.storyboard in Resources */,
@@ -284,10 +288,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "MyMeme-2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tokayon.MyMeme-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -295,10 +302,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "MyMeme-2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tokayon.MyMeme-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -321,6 +331,7 @@
 				E77EC5CA1CAC317A0019D3B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

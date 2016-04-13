@@ -13,16 +13,31 @@ class DetailViewController : UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var meme : Meme!
+    var editButton : UIBarButtonItem!
+    var saveButton : UIBarButtonItem!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        editButton = UIBarButtonItem(title: "Edit", style: .Plain, target: self, action: "editMeme")
+        self.navigationItem.rightBarButtonItem = editButton
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.tabBarController?.tabBar.hidden = true
-        self.imageView!.image = meme.memedImage
+        tabBarController?.tabBar.hidden = true
+        imageView.image = meme.memedImage
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.hidden = false
+        tabBarController?.tabBar.hidden = false
+    }
+    
+    func editMeme() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let memeEditorVC = storyboard.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
+        memeEditorVC.inputMeme = meme
+        self.presentViewController(memeEditorVC, animated: true, completion: nil)
     }
 }

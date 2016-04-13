@@ -6,6 +6,12 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Impact.ttf">
+            <string>Impact</string>
+            <string>Impact</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Table View Controller-->
         <scene sceneID="vDk-na-0Wi">
@@ -104,6 +110,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="TbP-N9-ZEH">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6OE-L0-PuV">
+                            <color key="tintColor" red="0.1745778093" green="0.1745778093" blue="0.1745778093" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="Bcd-mG-o5f" kind="presentation" id="RVp-vu-gpE"/>
                             </connections>
@@ -124,7 +131,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="BxF-EU-arK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.88366082702020199" green="0.78975079642736246" blue="0.54722016003157703" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="BkO-mk-nvb" kind="relationship" relationship="viewControllers" id="Ku7-Nj-cJi"/>
@@ -138,7 +145,7 @@
         <!--Meme Editor View Controller-->
         <scene sceneID="Mdr-uP-Qk5">
             <objects>
-                <viewController id="Bcd-mG-o5f" customClass="MemeEditorViewController" customModule="MyMeme_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeEditorViewController" id="Bcd-mG-o5f" customClass="MemeEditorViewController" customModule="MyMeme_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qBV-6S-5rH"/>
                         <viewControllerLayoutGuide type="bottom" id="k7y-mV-ZvD"/>
@@ -148,21 +155,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n61-Jp-OIr">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQ7-OK-DXi">
-                                <rect key="frame" x="20" y="114" width="560" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQ7-OK-DXi">
+                                <rect key="frame" x="90" y="70" width="420" height="18"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vll-r0-q3t">
-                                <rect key="frame" x="20" y="489" width="560" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vll-r0-q3t">
+                                <rect key="frame" x="90" y="512" width="420" height="18"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hP-aI-3DI">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="tintColor" red="0.1745778093" green="0.1745778093" blue="0.1745778093" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.88366082702020199" green="0.78975079642736246" blue="0.54722016003157703" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem id="FgL-cF-7qL">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="e1V-IO-t50">
@@ -183,48 +192,61 @@
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="G8b-SL-D7w"/>
                                     <barButtonItem systemItem="camera" id="9nN-SS-MnR">
+                                        <color key="tintColor" red="0.32569839020000002" green="0.32569839020000002" blue="0.32569839020000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="pickImageFromCamera:" destination="Bcd-mG-o5f" id="52I-sE-zuO"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="100" style="plain" systemItem="fixedSpace" id="apO-AP-FvP"/>
-                                    <barButtonItem title="Album" id="Kls-Gs-0Em">
+                                    <barButtonItem width="50" style="plain" systemItem="fixedSpace" id="apO-AP-FvP"/>
+                                    <barButtonItem systemItem="organize" id="Kls-Gs-0Em">
+                                        <color key="tintColor" red="0.32569839020000002" green="0.32569839020000002" blue="0.32569839020000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="pickImageFromAlbum:" destination="Bcd-mG-o5f" id="aAS-2V-mUr"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem width="50" style="plain" systemItem="fixedSpace" id="Flu-MG-tPB"/>
+                                    <barButtonItem title="F" id="GLn-ah-09v">
+                                        <color key="tintColor" red="0.1745778093" green="0.1745778093" blue="0.1745778093" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="changeFont:" destination="Bcd-mG-o5f" id="NbF-fY-vYa"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mFU-fU-B0R"/>
                                 </items>
+                                <color key="barTintColor" red="0.88366082702020199" green="0.78975079642736246" blue="0.54722016003157703" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Vll-r0-q3t" firstAttribute="leading" secondItem="n61-Jp-OIr" secondAttribute="leading" constant="20" id="7pI-uh-SG0"/>
+                            <constraint firstItem="Vll-r0-q3t" firstAttribute="bottom" secondItem="n61-Jp-OIr" secondAttribute="bottom" constant="-70" id="7sU-Py-Kk4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xUA-It-sJR" secondAttribute="trailing" constant="-20" id="7ss-mE-LbC"/>
+                            <constraint firstItem="AQ7-OK-DXi" firstAttribute="centerX" secondItem="n61-Jp-OIr" secondAttribute="centerX" id="D9a-eJ-Lkp"/>
                             <constraint firstItem="6hP-aI-3DI" firstAttribute="top" secondItem="qBV-6S-5rH" secondAttribute="bottom" id="EW0-rv-a4Q"/>
-                            <constraint firstItem="n61-Jp-OIr" firstAttribute="top" secondItem="qBV-6S-5rH" secondAttribute="bottom" id="O6r-LD-1FB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="n61-Jp-OIr" secondAttribute="trailing" constant="-20" id="Oj6-if-Qvt"/>
+                            <constraint firstItem="AQ7-OK-DXi" firstAttribute="top" secondItem="n61-Jp-OIr" secondAttribute="top" constant="70" id="FF9-ze-aB6"/>
+                            <constraint firstItem="n61-Jp-OIr" firstAttribute="width" secondItem="lNM-OK-pgL" secondAttribute="width" id="LpP-8B-zQH"/>
                             <constraint firstItem="xUA-It-sJR" firstAttribute="leading" secondItem="lNM-OK-pgL" secondAttribute="leadingMargin" constant="-20" id="Ony-uC-pqb"/>
-                            <constraint firstItem="k7y-mV-ZvD" firstAttribute="top" secondItem="n61-Jp-OIr" secondAttribute="bottom" id="QUh-WL-F3M"/>
                             <constraint firstItem="6hP-aI-3DI" firstAttribute="leading" secondItem="lNM-OK-pgL" secondAttribute="leadingMargin" constant="-20" id="RPk-hF-cuv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6hP-aI-3DI" secondAttribute="trailing" constant="-20" id="ScT-Mr-cGd"/>
-                            <constraint firstItem="xUA-It-sJR" firstAttribute="top" secondItem="Vll-r0-q3t" secondAttribute="bottom" constant="50" id="a3L-5Q-SOD"/>
-                            <constraint firstItem="AQ7-OK-DXi" firstAttribute="trailing" secondItem="n61-Jp-OIr" secondAttribute="trailing" constant="-20" id="dGd-wO-r7k"/>
-                            <constraint firstItem="n61-Jp-OIr" firstAttribute="leading" secondItem="lNM-OK-pgL" secondAttribute="leadingMargin" constant="-20" id="g7w-RK-FNI"/>
-                            <constraint firstItem="AQ7-OK-DXi" firstAttribute="leading" secondItem="n61-Jp-OIr" secondAttribute="leading" constant="20" id="gCl-MP-71J"/>
+                            <constraint firstItem="AQ7-OK-DXi" firstAttribute="width" secondItem="n61-Jp-OIr" secondAttribute="width" multiplier="0.7" id="YWr-ML-VoK"/>
+                            <constraint firstItem="n61-Jp-OIr" firstAttribute="centerY" secondItem="lNM-OK-pgL" secondAttribute="centerY" id="YgB-yL-SWC"/>
                             <constraint firstItem="k7y-mV-ZvD" firstAttribute="top" secondItem="xUA-It-sJR" secondAttribute="bottom" id="gvF-UZ-LVY"/>
-                            <constraint firstItem="AQ7-OK-DXi" firstAttribute="top" secondItem="6hP-aI-3DI" secondAttribute="bottom" constant="50" id="iMO-Lj-vtS"/>
-                            <constraint firstItem="Vll-r0-q3t" firstAttribute="trailing" secondItem="n61-Jp-OIr" secondAttribute="trailing" constant="-20" id="tzy-bI-mJx"/>
+                            <constraint firstItem="Vll-r0-q3t" firstAttribute="centerX" secondItem="n61-Jp-OIr" secondAttribute="centerX" id="mPM-uh-p8E"/>
+                            <constraint firstItem="n61-Jp-OIr" firstAttribute="centerX" secondItem="lNM-OK-pgL" secondAttribute="centerX" id="pS6-81-rDW"/>
+                            <constraint firstItem="Vll-r0-q3t" firstAttribute="width" secondItem="n61-Jp-OIr" secondAttribute="width" multiplier="0.7" id="qdw-Nx-eoA"/>
+                            <constraint firstItem="n61-Jp-OIr" firstAttribute="height" secondItem="lNM-OK-pgL" secondAttribute="height" id="rvm-e5-1QP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomTextField" destination="Vll-r0-q3t" id="6AM-9d-K0M"/>
+                        <outlet property="bottomTextFieldConstraint" destination="7sU-Py-Kk4" id="6LG-8z-JdH"/>
                         <outlet property="cameraButton" destination="9nN-SS-MnR" id="nmO-6k-7kI"/>
+                        <outlet property="fontButton" destination="GLn-ah-09v" id="Q8r-JD-qHp"/>
                         <outlet property="imageView" destination="n61-Jp-OIr" id="COy-zQ-QrC"/>
                         <outlet property="navBar" destination="6hP-aI-3DI" id="yJv-3D-WJK"/>
                         <outlet property="shareButtonItem" destination="e1V-IO-t50" id="Csj-dv-XCa"/>
                         <outlet property="toolBar" destination="xUA-It-sJR" id="vgO-Ba-yCX"/>
                         <outlet property="topTextField" destination="AQ7-OK-DXi" id="2A5-sg-pSz"/>
+                        <outlet property="topTextFieldConstraint" destination="FF9-ze-aB6" id="TA9-PD-eCC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogl-mU-9Xr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,16 +265,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yvH-31-BAr">
-                                <rect key="frame" x="60" y="150" width="480" height="300"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yvH-31-BAr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yvH-31-BAr" firstAttribute="centerY" secondItem="LZq-xS-mGf" secondAttribute="centerY" id="0zy-M3-ifx"/>
                             <constraint firstItem="yvH-31-BAr" firstAttribute="centerX" secondItem="LZq-xS-mGf" secondAttribute="centerX" id="SkX-DW-uTV"/>
-                            <constraint firstItem="yvH-31-BAr" firstAttribute="height" secondItem="LZq-xS-mGf" secondAttribute="height" multiplier="0.5" id="fGf-DS-TzG"/>
-                            <constraint firstItem="yvH-31-BAr" firstAttribute="width" secondItem="LZq-xS-mGf" secondAttribute="width" multiplier="0.8" id="zbK-98-BvO"/>
+                            <constraint firstItem="yvH-31-BAr" firstAttribute="height" secondItem="LZq-xS-mGf" secondAttribute="height" id="fGf-DS-TzG"/>
+                            <constraint firstItem="yvH-31-BAr" firstAttribute="width" secondItem="LZq-xS-mGf" secondAttribute="width" id="zbK-98-BvO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -272,6 +294,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KyE-nh-fZh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.17457780934343436" green="0.17457780934343436" blue="0.17457780934343436" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.88366082702020199" green="0.78975079642736246" blue="0.54722016003157703" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -291,6 +315,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2K3-Yo-W2t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.88366082700000004" green="0.78975079640000001" blue="0.54722015999999996" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
